@@ -1,8 +1,12 @@
-#include "tools.h"
-#include "norm.h"
+#include "cudaLib.h"
+#include "cpuLib.h"
+#include <cstdint>
 
 int main() {
-	run<int>();
-	bar();
+	cudaRun(123);
+    cudaRun((uint16_t)111);
+	cpuRun(6666);
+    cpuRun(1.2);
+
 	return 0;
 }
