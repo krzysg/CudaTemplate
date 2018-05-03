@@ -11,8 +11,7 @@ set(CMAKE_CUDA_FLAGS "--cudart shared -g -lineinfo -Xptxas -O3,-v")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3 -ffast-math")
 set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g")
 
-#set(CUDA_SEPARABLE_COMPILATION ON)
-#set(CMAKE_CUDA_SEPARABLE_COMPILATION ON)
+set(CMAKE_CUDA_SEPARABLE_COMPILATION ON)
 enable_language(CUDA)
 
 #message(STATUS "---------------------- VARS BEG ---------------------")
@@ -27,7 +26,11 @@ enable_language(CUDA)
 
 
 add_library(sharedLib SHARED src/tools.cu src/norm.cc)
+add_library(staticLib STATIC src/tools.cu src/norm.cc)
 
-add_executable(main src/main.cc)
-#set_property(TARGET main PROPERTY CUDA_SEPARABLE_COMPILATION OFF)
-target_link_libraries(main sharedLib)
+add_executable(mainStatic src/main.cc)
+target_link_libraries(mainStatic staticLib)
+
+add_executable(mainShared src/main.cc)
+target_link_libraries(mainShared sharedLib)
+
