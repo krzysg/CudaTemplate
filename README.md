@@ -1,4 +1,4 @@
-# TestCuda
+# CudaTemplate
 Easiest possible cmake project using both - nvcc and host compiler - 
 serving as a copy/paste template for new CUDA projects.
 
