@@ -1,0 +1,15 @@
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-9.1/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-9.1/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-9.1/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-9.1/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-9.1/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-9.1/bin:/Developer/NVIDIA/CUDA-9.1/bin:/opt/local/bin:/opt/local/sbin:/Users/krzysg/bin:/opt/openmpi/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/krzysg/.rvm/bin:~/Documents/ws/libs/cg/bin:/Users/krzysg/bin/gradle/bin:/Users/krzysg/Documents/MOSAIC/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-9.1/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-9.1/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+nvcc fatal   : Don't know what to do with '2'
