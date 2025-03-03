@@ -16,6 +16,7 @@ message(STATUS "CXX debug flags   [${CMAKE_CXX_FLAGS_DEBUG}]")
 
 # CUDA compiler settings
 set(CMAKE_CUDA_STANDARD 14)
+set(CMAKE_CUDA_ARCHITECTURES native)
 set(CMAKE_CUDA_SEPARABLE_COMPILATION ON)
 #set(CMAKE_CUDA_FLAGS "--compiler-options '-fPIC' --cudart shared -g -lineinfo -Xptxas -O3,-v ${CMAKE_CUDA_FLAGS}")
 enable_language(CUDA)
